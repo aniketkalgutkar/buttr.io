@@ -9,7 +9,7 @@ Buy Pro
 [data-bs-theme=light] {
   --bs-body-bg: #ffffff;
   --bs-body-color: #494B5B;
-  --bs-primary: #215C5C;
+  --bs-primary: #E4C441;
   --bs-primary-rgb: 33, 92, 92;
   --bs-primary-hover: #144B4B;
   --bs-primary-hover-rgb: 20, 75, 75;
@@ -33,7 +33,7 @@ Buy Pro
 [data-bs-theme=dark] {
   --bs-body-bg: #000000;
   --bs-body-color: #bcbcbc;
-  --bs-primary: #215C5C;
+  --bs-primary: #e2ad16;
   --bs-primary-rgb: 33, 92, 92;
   --bs-primary-hover: #144B4B;
   --bs-primary-hover-rgb: 20, 75, 75;
@@ -703,6 +703,8 @@ h6 {
   display: none;
 }
 [data-bs-theme=dark] .fbs__net-navbar.dark .navbar-brand .logo.light {
+  width: 138px;
+  padding:10px;
   display: block;
 }
 [data-bs-theme=dark] .fbs__net-navbar.dark {
