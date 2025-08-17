@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import GoogleCalendarButton from "../SharedComponents/GoogleCalendarButton";
+import BookingButton from "../SharedComponents/BookingButton";
 
 function Home() {
 
@@ -21,15 +23,14 @@ function Home() {
                 {/*<!-- Vertex-->  */}
                 
                 {/*<!-- If you plan to use an image logo, uncomment this if it is commented--> */}
-                <img className="logo dark img-fluid" src="assets/images/logo-dark.svg" alt="FreeBootstrap.net image placeholder" />
-                <img className="logo light img-fluid" src="assets/images/logo-light.svg" alt="FreeBootstrap.net image placeholder" />
+                <img className="logo dark img-fluid" src="assets/images/ButtrLogo.png" alt="FreeBootstrap.net image placeholder" />
+                <img className="logo light img-fluid" src="assets/images/ButtrLogo.png" alt="FreeBootstrap.net image placeholder" />
                 
                 </a>
             {/*<!-- End Logo--> */}
             
             {/*<!-- Start offcanvas--> */}
             <div className="offcanvas offcanvas-start w-75" id="fbs__net-navbars" tabIndex={-1} aria-labelledby="fbs__net-navbarsLabel">
-                
                 
                 <div className="offcanvas-header">
                 <div className="offcanvas-header-logo">
@@ -170,7 +171,7 @@ function Home() {
             <div className="ms-auto w-auto">
                 
                 
-                <div className="header-social d-flex align-items-center gap-1"><a className="btn btn-primary py-2" href="page-contact.html">Get Started</a>
+                <div className="header-social d-flex align-items-center gap-1"><a className="btn btn-primary py-2" href="page-contact.html">Book Free Call</a>
                 
                 
                 {/*<!-- Toggle Button Dark and Light Mode--> */}
@@ -204,26 +205,31 @@ function Home() {
                 <div className="row">
                 <div className="col-lg-6 mb-4 mb-lg-0">
                     <div className="row">
-                    <div className="col-lg-11"><span className="hero-subtitle text-uppercase" data-aos="fade-up" data-aos-delay="0">Innovative Fintech Solutions</span>
-                        <h1 className="hero-title mb-3" data-aos="fade-up" data-aos-delay="100">Secure, Efficient, and User-Friendly Financial Services</h1>
+                    <div className="col-lg-11"><span className="hero-subtitle text-uppercase" data-aos="fade-up" data-aos-delay="0">Innovative Technology Solutions</span>
+                        <h1 className="hero-title mb-3" data-aos="fade-up" data-aos-delay="100">100x your tech potential with buttr.io</h1>
                         
-                        <p className="hero-description mb-4 mb-lg-5" data-aos="fade-up" data-aos-delay="200">Experience the future of finance with our secure, efficient, and user-friendly financial services.</p>
-                        <div className="cta d-flex gap-2 mb-4 mb-lg-5" data-aos="fade-up" data-aos-delay="300"><a className="btn" href="#">Get Started Now</a><a className="btn btn-white-outline" href="#">Learn More 
+                        <p className="hero-description mb-4 mb-lg-5" data-aos="fade-up" data-aos-delay="200">Want your business to be supported by engineers who worked in Google, Oracle, Microsoft & Amazon?</p>
+                        <div className="cta d-flex gap-2 mb-4 mb-lg-5" data-aos="fade-up" data-aos-delay="300">
+                                <a className="btn" href="#">Book Free Call</a>
+                                {/* <GoogleCalendarButton /> */}
+                                {/* <BookingButton /> */}
+                                <a className="btn btn-white-outline" href="#">Learn More 
                             <svg className="lucide lucide-arrow-up-right" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <path d="M7 7h10v10"></path>
                             <path d="M7 17 17 7"></path>
                             </svg></a></div>
-                        <div className="logos mb-4" data-aos="fade-up" data-aos-delay="400"><span className="logos-title text-uppercase mb-4 d-block">Trusted by major companies worldwide</span>
+                        {/* <div className="logos mb-4" data-aos="fade-up" data-aos-delay="400"><span className="logos-title text-uppercase mb-4 d-block">Trusted by major companies worldwide</span>
                         <div className="logos-images d-flex gap-4 align-items-center">
                             <img className="img-fluid js-img-to-inline-svg" src="assets/images/logo/actual-size/logo-air-bnb__black.svg" alt="Company 1" style={{"width": "110px"}} /><img className="img-fluid js-img-to-inline-svg" src="assets/images/logo/actual-size/logo-ibm__black.svg" alt="Company 2" style={{"width": "80px"}} /><img className="img-fluid js-img-to-inline-svg" src="assets/images/logo/actual-size/logo-google__black.svg" alt="Company 3" style={{"width": "110px"}} />
                         </div>
-                        </div>
+                        </div> */}
                     </div>
                     </div>
                 </div>
                 <div className="col-lg-6">
                     <div className="hero-img">
-                        <img className="img-card img-fluid" src="assets/images/card-expenses.png" alt="Image card" data-aos="fade-down" data-aos-delay="600" /><img className="img-main img-fluid rounded-4" src="assets/images/hero-img-1-min.jpg" alt="Hero Image" data-aos="fade-in" data-aos-delay="500" />
+                        {/* <img className="img-card img-fluid" src="assets/images/card-expenses.png" alt="Image card" data-aos="fade-down" data-aos-delay="600" /> */}
+                        <img className="img-main img-fluid rounded-4" src="assets/images/hero-img-1-min.jpg" alt="Hero Image" data-aos="fade-in" data-aos-delay="500" />
                     </div>
                 </div>
                 </div>
@@ -238,18 +244,18 @@ function Home() {
                 <div className="col-md-6 order-md-2">
                     <div className="row justify-content-end">
                     <div className="col-md-11 mb-4 mb-md-0"><span className="subtitle text-uppercase mb-3" data-aos="fade-up" data-aos-delay="0">About us</span>
-                        <h2 className="mb-4" data-aos="fade-up" data-aos-delay="100">Experience the future of finance with our secure, efficient, and user-friendly financial services</h2>
+                        <h2 className="mb-4" data-aos="fade-up" data-aos-delay="100">Experience world class tech that will accelerate your business's growth potential</h2>
                         <div data-aos="fade-up" data-aos-delay="200">
-                        <p>Founded with the vision of revolutionizing the financial industry, we are a leading fintech company dedicated to providing innovative and secure financial solutions.</p>
-                        <p>Our cutting-edge platform ensures your transactions are safe, streamlined, and easy to manage, empowering you to take control of your financial journey with confidence and convenience.</p>
+                        <p>Founded with the vision of revolutionizing businesses, we are a group of leading engineers dedicated to providing innovative tech solutions.</p>
+                        <p>Bring the technology of Silicon Valley to your business and rapidly accelerate your growth</p>
                         </div>
                         <h4 className="small fw-bold mt-4 mb-3" data-aos="fade-up" data-aos-delay="300">Key Values and Vision</h4>
                         <ul className="d-flex flex-row flex-wrap list-unstyled gap-3 features" data-aos="fade-up" data-aos-delay="400">
+                        <li className="d-flex align-items-center gap-2"><span className="icon rounded-circle text-center"><i className="bi bi-check"></i></span><span className="text">Performance</span></li>
+                        <li className="d-flex align-items-center gap-2"><span className="icon rounded-circle text-center"><i className="bi bi-check"></i></span><span className="text">Scalability</span></li>
+                        <li className="d-flex align-items-center gap-2"><span className="icon rounded-circle text-center"><i className="bi bi-check"></i></span><span className="text">Reliability </span></li>
+                        <li className="d-flex align-items-center gap-2"><span className="icon rounded-circle text-center"><i className="bi bi-check"></i></span><span className="text">Optimisation</span></li>
                         <li className="d-flex align-items-center gap-2"><span className="icon rounded-circle text-center"><i className="bi bi-check"></i></span><span className="text">Innovation</span></li>
-                        <li className="d-flex align-items-center gap-2"><span className="icon rounded-circle text-center"><i className="bi bi-check"></i></span><span className="text">Security</span></li>
-                        <li className="d-flex align-items-center gap-2"><span className="icon rounded-circle text-center"><i className="bi bi-check"></i></span><span className="text">User-Centric Design </span></li>
-                        <li className="d-flex align-items-center gap-2"><span className="icon rounded-circle text-center"><i className="bi bi-check"></i></span><span className="text">Transparency</span></li>
-                        <li className="d-flex align-items-center gap-2"><span className="icon rounded-circle text-center"><i className="bi bi-check"></i></span><span className="text">Empowerment</span></li>
                         </ul>
                     </div>
                     </div>
@@ -260,7 +266,7 @@ function Home() {
                         <div className="mission-icon text-center rounded-circle"><i className="bi bi-lightbulb fs-4"></i></div>
                         <div>
                         <h3 className="text-uppercase fw-bold">Mission Statement</h3>
-                        <p className="fs-5 mb-0">Our mission is to empower individuals and businesses by delivering secure, efficient, and user-friendly financial services.</p>
+                        <p className="fs-5 mb-0">Our mission is to empower businesses by delivering efficient & world class tech services at a fraction of the cost.</p>
                         </div>
                     </div>
                     </div>
@@ -341,7 +347,7 @@ function Home() {
                     <h3>Personal</h3>
                     <p>Choose a plan that fits your personal financial needs and start managing your finances more effectively.</p>
                     <div className="price mb-4"><strong>$7</strong><span>/ month</span></div>
-                    <div><a className="btn" href="#">Get Started</a></div>
+                    <div><a className="btn" href="#">Book Free Call</a></div>
                     </div>
                 </div>
                 <div className="col-md-8" data-aos="fade-up" data-aos-delay="400">
@@ -351,7 +357,7 @@ function Home() {
                         <h3 className="mb-3">Business</h3>
                         <p>Optimize your business financial operations with our tailored business plans.</p>
                         <div className="price mb-4"><strong className="me-1">$29</strong><span>/ month</span></div>
-                        <div><a className="btn btn-white hover-outline" href="#">Get Started</a></div>
+                        <div><a className="btn btn-white hover-outline" href="#">Book Free Call</a></div>
                         </div>
                         <div className="col-md-6 pricing-features">
                         <h4 className="text-uppercase fw-bold mb-3">Features</h4>
