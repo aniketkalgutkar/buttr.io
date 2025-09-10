@@ -11,7 +11,7 @@ Buy Pro
   --bs-body-color: #494B5B;
   --bs-primary: #E4C441;
   --bs-primary-rgb: 33, 92, 92;
-  --bs-primary-hover: #144B4B;
+  --bs-primary-hover: #ffba00; // TODO: needs a good secoondary color for button
   --bs-primary-hover-rgb: 20, 75, 75;
   --bs-secondary: #CCE8C9;
   --bs-secondary-rgb: 204, 232, 201;
@@ -35,7 +35,7 @@ Buy Pro
   --bs-body-color: #bcbcbc;
   --bs-primary: #e2ad16;
   --bs-primary-rgb: 33, 92, 92;
-  --bs-primary-hover: #144B4B;
+  --bs-primary-hover: #ffba00;
   --bs-primary-hover-rgb: 20, 75, 75;
   --bs-secondary: #CCE8C9;
   --bs-secondary-rgb: 204, 232, 201;
@@ -321,7 +321,7 @@ h6 {
   top: 0;
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
-  z-index: 99999;
+  z-index: 1;
   width: 100%;
   background-color: transparent !important;
   border: none;
