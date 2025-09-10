@@ -1,40 +1,47 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
-const GoogleCalendarButton: React.FC = () => {
+const GoogleCalendarButton = (props: {text: string, buttonCss?: string}) => {
   const buttonRef = useRef<HTMLDivElement>(null);
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
-    // load Google CSS
-    const link = document.createElement("link");
-    link.href = "https://calendar.google.com/calendar/scheduling-button-script.css";
-    link.rel = "stylesheet";
-    document.head.appendChild(link);
+    // Prevent duplicate injections
+    if (buttonRef.current && buttonRef.current.childElementCount === 0) {
+      let button = (window as any).calendar?.schedulingButton
 
-    // load Google script
-    const script = document.createElement("script");
-    script.src = "https://calendar.google.com/calendar/scheduling-button-script.js";
-    script.async = true;
-
-    script.onload = () => {
-      if (buttonRef.current && (window as any).calendar?.schedulingButton) {
-        (window as any).calendar.schedulingButton.load({
-          url: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0ZAyqW_u_NmeAV7U7IjMbo2XGu9LsRAQdzNLZWZfIrZQ7c3hwv8upilov4f060pImRkNg9aEVX?gv=true",
-          color: "#E4C441",
-          label: "Book an appointment",
-          target: buttonRef.current,
-        });
-      }
-    };
-
-    document.body.appendChild(script);
-
-    return () => {
-      document.head.removeChild(link);
-      document.body.removeChild(script);
-    };
+      button?.load({
+        url: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0ZAyqW_u_NmeAV7U7IjMbo2XGu9LsRAQdzNLZWZfIrZQ7c3hwv8upilov4f060pImRkNg9aEVX?gv=true",
+        color: "#E4C441",
+        label: "Book an appointment",
+        target: buttonRef.current,
+      });
+    }
   }, []);
 
-  return <div ref={buttonRef}></div>;
+  return (
+    <>
+       <Button variant="primary" onClick={() => setShow(true)} className={props.buttonCss}>
+        {props.text}
+      </Button>
+
+      <Modal
+        show={show}
+        onHide={() => setShow(false)}
+        fullscreen={true}
+        dialogClassName="lg"
+        aria-labelledby="example-custom-modal-styling-title"
+      >
+        <Modal.Header closeButton>
+          {props.text}
+        </Modal.Header>
+        <Modal.Body>
+          <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0ZAyqW_u_NmeAV7U7IjMbo2XGu9LsRAQdzNLZWZfIrZQ7c3hwv8upilov4f060pImRkNg9aEVX?gv=true" className="w-100 h-100"/>
+        </Modal.Body>
+      </Modal>
+    </>
+  );
 };
 
 export default GoogleCalendarButton;

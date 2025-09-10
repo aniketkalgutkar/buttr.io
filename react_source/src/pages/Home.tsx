@@ -171,7 +171,9 @@ function Home() {
             <div className="ms-auto w-auto">
                 
                 
-                <div className="header-social d-flex align-items-center gap-1"><a className="btn btn-primary py-2" href="page-contact.html">Book Free Call</a>
+                <div className="header-social d-flex align-items-center gap-1">
+                    {/* <a className="btn btn-primary py-2" href="page-contact.html">Book Free Call</a> */}
+                    <GoogleCalendarButton text={"Book Free Call"} buttonCss="btn btn-primary py-2"/>
                 
                 
                 {/*<!-- Toggle Button Dark and Light Mode--> */}
@@ -210,8 +212,7 @@ function Home() {
                         
                         <p className="hero-description mb-4 mb-lg-5" data-aos="fade-up" data-aos-delay="200">Want your business to be supported by engineers who worked in Google, Oracle, Microsoft & Amazon?</p>
                         <div className="cta d-flex gap-2 mb-4 mb-lg-5" data-aos="fade-up" data-aos-delay="300">
-                                <a className="btn" href="#">Book Free Call</a>
-                                {/* <GoogleCalendarButton /> */}
+                                <GoogleCalendarButton text={"Book Free Call"} buttonCss="btn-primary py-2"/>
                                 {/* <BookingButton /> */}
                                 <a className="btn btn-white-outline" href="#">Learn More 
                             <svg className="lucide lucide-arrow-up-right" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -348,6 +349,7 @@ function Home() {
                     <p>Choose a plan that fits your personal financial needs and start managing your finances more effectively.</p>
                     <div className="price mb-4"><strong>$7</strong><span>/ month</span></div>
                     <div><a className="btn" href="#">Book Free Call</a></div>
+                    {/* <GoogleCalendarButton text={"Book Free Call"}/> */}
                     </div>
                 </div>
                 <div className="col-md-8" data-aos="fade-up" data-aos-delay="400">
