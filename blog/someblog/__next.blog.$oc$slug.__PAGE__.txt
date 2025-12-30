@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-2:I[98391,["/buttr.io/_next/static/chunks/ca0ed9509334580e.js"],"OutletBoundary"]
+2:I[98391,["/_next/static/chunks/ca0ed9509334580e.js"],"OutletBoundary"]
 3:"$Sreact.suspense"
-0:{"buildId":"LPO8QvJn7fLKnK5udtfOO","rsc":["$","$1","c",{"children":[["$","main",null,{"style":{"padding":40},"children":["$","article",null,{"dangerouslySetInnerHTML":{"__html":"<h1>Hello World</h1>\n<h2>This would probably be my Blog Post</h2>\n<p>Here is an image:</p>\n<p><img src=\"/content_assets/images/hero.jpeg\" alt=\"Hero image\"></p>\n<p>Here is a file:</p>\n<p><a href=\"/content_assets/files/sample.pdf\">Download PDF</a></p>\n<p>This is my first markdown post.</p>\n"}}]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"4It757t8XrVCH_Pu27DOu","rsc":["$","$1","c",{"children":[["$","main",null,{"style":{"padding":40},"children":["$","article",null,{"dangerouslySetInnerHTML":{"__html":"<h1>Hello World</h1>\n<h2>This would probably be my Blog Post</h2>\n<p>Here is an image:</p>\n<p><img src=\"/content_assets/images/hero.jpeg\" alt=\"Hero image\"></p>\n<p>Here is a file:</p>\n<p><a href=\"/content_assets/files/sample.pdf\">Download PDF</a></p>\n<p>This is my first markdown post.</p>\n"}}]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
 4:null
