@@ -1,7 +1,12 @@
 self.__BUILD_MANIFEST = {
   "__rewrites": {
     "afterFiles": [],
-    "beforeFiles": [],
+    "beforeFiles": [
+      {
+        "source": "/buttr.io//_next/:path+",
+        "destination": "/buttr.io/_next/:path+"
+      }
+    ],
     "fallback": []
   },
   "sortedPages": [
