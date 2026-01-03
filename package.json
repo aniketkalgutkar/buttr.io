@@ -1,0 +1,35 @@
+{
+  "name": "buttr-landing",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "DEV=true next dev",
+    "gh-build": "next build",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "deploy": "gh-pages -d out"
+  },
+  "dependencies": {
+    "@google/genai": "^1.29.0",
+    "@neondatabase/serverless": "^1.0.2",
+    "framer-motion": "^12.23.24",
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^0.553.0",
+    "next": "16.1.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.1",
+    "gh-pages": "^6.3.0",
+    "typescript": "^5"
+  }
+}
