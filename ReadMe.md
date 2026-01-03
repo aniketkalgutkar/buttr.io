@@ -18,7 +18,7 @@ npm run dev
 ```
 npm run gh-build-deploy
 ```
-# Alter hacks to deploy anything to buttr.io
+# Alternate hacks to deploy anything to buttr.io
 ## Deploy simple HTML,CSS, JS
 Update the index.html in gh-pages branch
 
