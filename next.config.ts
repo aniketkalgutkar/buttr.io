@@ -8,9 +8,7 @@ const githubConfig: NextConfig = inDevMode ? {} : {
   output: 'export',
   images: {
     unoptimized: true // REQUIRED for GitHub Pages
-  },
-  basePath: '/buttr.io',
-  assetPrefix: '/buttr.io/',
+  }
 };
 /* end 1 */
 
