@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const inDevMode = process.env.DEV === "true";
-console.log("inDevMode: ", inDevMode);
 
 /* 1 - below attributes added explicitly added here for github pages */
 const githubConfig: NextConfig = inDevMode ? {} : {

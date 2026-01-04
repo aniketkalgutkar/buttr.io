@@ -8,7 +8,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageSquareCode, X, Send, BarChart } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { sendMessageToGemini } from '../../services/geminiService';
+import { sendMessageToGemini } from '../services/geminiService';
 import { ChatMessage } from '../types/types';
 
 const AIChat: React.FC = () => {

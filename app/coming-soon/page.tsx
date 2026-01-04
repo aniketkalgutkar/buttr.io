@@ -1,16 +1,19 @@
 "use client"
+
 import { motion, useScroll, useTransform } from "framer-motion";
 import CustomCursor from "./components/CustomCursor";
 import FluidBackground from "./components/FluidBackground";
 import AIChat from "./components/AIChat";
-import { BarChart3, BrainCircuit, ExternalLink, LineChart, Mail, Search, Sparkles } from "lucide-react";
+import { ArrowRight, BarChart3, BrainCircuit, ExternalLink, LineChart, Mail, Search, Sparkles } from "lucide-react";
 import SoftText from "./components/SoftText";
 import WaitlistForm from "./components/WaitlistForm";
+import { useState } from "react";
 
 const App: React.FC = () => {
   const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.95]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const scrollToWaitlist = () => {
     const el = document.getElementById('hero-waitlist');
@@ -26,6 +29,7 @@ const App: React.FC = () => {
     <div className="relative min-h-screen text-[#2D2A26] selection:bg-[#F59E0B] selection:text-white overflow-x-hidden bg-[#FFFDF5]">
       <CustomCursor />
       <FluidBackground />
+      <WaitlistForm isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       {/* <AIChat /> */}
       
       {/* Navigation */}
@@ -47,10 +51,10 @@ const App: React.FC = () => {
         </div>
 
         <button 
-          onClick={scrollToWaitlist}
+          onClick={() => setIsModalOpen(true)}
           className="bg-[#2D2A26] text-white border border-black/5 px-8 py-3 rounded-full text-xs font-extrabold uppercase tracking-widest shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all active:scale-95"
         >
-          Get Access
+          Get Early Access
         </button>
       </nav>
 
@@ -79,12 +83,26 @@ const App: React.FC = () => {
             Track visibility, sentiment, and share of AI mind.
           </p>
 
-          <WaitlistForm id="hero-waitlist" />
+          <button 
+            onClick={() => setIsModalOpen(true)}
+            className="bg-[#2D2A26] text-white px-12 py-6 rounded-full font-bold text-lg flex items-center justify-center gap-3 hover:bg-black transition-all active:scale-95 shadow-2xl hover:shadow-amber-200/50 mx-auto group"
+          >
+            Join the Waitlist <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+          </button>
           
-          <div className="mt-8 flex items-center justify-center gap-8 text-[9px] font-bold uppercase tracking-[0.3em] text-gray-300">
-            <span className="flex items-center gap-1.5"><div className="w-1 h-1 bg-amber-400 rounded-full"/> GPT-4o</span>
-            <span className="flex items-center gap-1.5"><div className="w-1 h-1 bg-amber-400 rounded-full"/> Claude 3.5</span>
-            <span className="flex items-center gap-1.5"><div className="w-1 h-1 bg-amber-400 rounded-full"/> Gemini 2.0</span>
+          <div className="mt-12 flex items-center justify-center gap-8 text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">
+             <div className="flex flex-col items-center gap-2">
+                <span className="text-black">GPT-4o</span>
+                <div className="w-1.5 h-1.5 bg-amber-400 rounded-full animate-pulse" />
+             </div>
+             <div className="flex flex-col items-center gap-2">
+                <span className="text-black">Claude 3.5</span>
+                <div className="w-1.5 h-1.5 bg-amber-400 rounded-full animate-pulse" style={{ animationDelay: '0.2s'}} />
+             </div>
+             <div className="flex flex-col items-center gap-2">
+                <span className="text-black">Gemini 2.0</span>
+                <div className="w-1.5 h-1.5 bg-amber-400 rounded-full animate-pulse" style={{ animationDelay: '0.4s'}} />
+             </div>
           </div>
         </motion.div>
       </header>
@@ -248,15 +266,28 @@ const App: React.FC = () => {
       </section>
 
       {/* CTA SECTION - NEW FOOTER WAITLIST */}
-      <section className="py-40 px-6 md:px-12 text-center bg-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-radial-gradient from-amber-50 to-transparent opacity-50" />
+      <section className="py-48 px-6 md:px-12 text-center bg-[#FFFDF5] relative overflow-hidden">
+        <div className="absolute inset-0 bg-radial-gradient from-amber-100/30 to-transparent opacity-60 pointer-events-none" />
         <div className="max-w-4xl mx-auto relative z-10">
-          <h2 className="text-5xl md:text-7xl font-serif italic mb-10">Ready to see how you <br />show up in AI Search?</h2>
-          <p className="text-lg text-gray-500 mb-12 max-w-xl mx-auto leading-relaxed">
-            Join the elite marketing teams already tracking their AI visibility. 
-            Limited audit spots available for Spring 2025.
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            className="mb-10 inline-block p-4 bg-white rounded-3xl shadow-xl border border-black/5"
+          >
+             <Sparkles className="w-8 h-8 text-[#F59E0B]" />
+          </motion.div>
+          <h2 className="text-5xl md:text-[6rem] font-serif italic mb-10 leading-[0.9]">
+            Ready to decode <br />your visibility?
+          </h2>
+          <p className="text-xl text-gray-500 mb-16 max-w-xl mx-auto leading-relaxed font-light">
+            Join the elite marketing teams already tracking their brand health in the age of AI search.
           </p>
-          <WaitlistForm id="footer-waitlist" variant="footer" />
+          <button 
+            onClick={() => setIsModalOpen(true)}
+            className="bg-[#2D2A26] text-white px-10 py-5 rounded-full font-bold flex items-center justify-center gap-2 hover:bg-black transition-all active:scale-95 shadow-xl hover:shadow-amber-200/50 mx-auto"
+          >
+            Claim Audit Spot <ArrowRight className="w-5 h-5" />
+          </button>
         </div>
       </section>
 
@@ -277,7 +308,7 @@ const App: React.FC = () => {
             </div>
             
             <div className="flex flex-wrap justify-center gap-10 text-[10px] font-extrabold uppercase tracking-[0.2em] text-gray-400">
-              <a href="mailto:hello@buttr.io" className="flex items-center gap-2 hover:text-amber-500 transition-colors">
+              <a href="mailto:contact@buttr.io" className="flex items-center gap-2 hover:text-amber-500 transition-colors">
                 <Mail className="w-3 h-3" /> Contact Us
               </a>
               <a href="#" className="hover:text-amber-500 transition-colors">Twitter</a>
